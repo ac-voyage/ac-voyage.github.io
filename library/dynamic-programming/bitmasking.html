@@ -7,7 +7,7 @@
     <meta name="description" content="Make it accepted.">
     <link rel="stylesheet" href="https://cdn.bootcss.com/KaTeX/0.6.0/katex.min.css">
     
-    <link rel="preload" href="/assets/css/0.styles.cc2a2ebf.css" as="style"><link rel="preload" href="/assets/js/app.f1e5f2d0.js" as="script"><link rel="preload" href="/assets/js/7.2f419b6a.js" as="script"><link rel="prefetch" href="/assets/js/4.90bd2afb.js"><link rel="prefetch" href="/assets/js/2.cda51ec0.js"><link rel="prefetch" href="/assets/js/3.2b4c7406.js"><link rel="prefetch" href="/assets/js/5.22591b60.js"><link rel="prefetch" href="/assets/js/6.f77475ad.js"><link rel="prefetch" href="/assets/js/8.929d7fcb.js"><link rel="prefetch" href="/assets/js/9.1cad8ad9.js">
+    <link rel="preload" href="/assets/css/0.styles.cc2a2ebf.css" as="style"><link rel="preload" href="/assets/js/app.253892f1.js" as="script"><link rel="preload" href="/assets/js/7.4151bca0.js" as="script"><link rel="prefetch" href="/assets/js/4.90bd2afb.js"><link rel="prefetch" href="/assets/js/2.cda51ec0.js"><link rel="prefetch" href="/assets/js/3.2b4c7406.js"><link rel="prefetch" href="/assets/js/5.22591b60.js"><link rel="prefetch" href="/assets/js/6.f77475ad.js"><link rel="prefetch" href="/assets/js/8.929d7fcb.js"><link rel="prefetch" href="/assets/js/9.1cad8ad9.js">
     <link rel="stylesheet" href="/assets/css/0.styles.cc2a2ebf.css">
   </head>
   <body>
@@ -25,7 +25,12 @@
 <span class="token punctuation">{</span>
     <span class="token comment">/* do something on t */</span>
 <span class="token punctuation">}</span>
-</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div></div> <div class="page-edit"><div class="edit-link"><a href="https://github.com/ac-voyage/ac-voyage/edit/master/library/dynamic-programming/bitmasking.md" target="_blank" rel="noopener noreferrer">Edit this page</a> <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></div> <div class="last-updated"><span class="prefix">Last Updated: </span> <span class="time">8/15/2018, 4:09:47 PM</span></div></div> <div class="page-nav"><p class="inner"><span class="prev">
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><h3 id="枚举状态-f-减去状态-s-的集合的每一位"><a href="#枚举状态-f-减去状态-s-的集合的每一位" aria-hidden="true" class="header-anchor">#</a> 枚举状态 <code>f</code> 减去状态 <code>s</code> 的集合的每一位</h3> <p>假设全集状态为 <code>u</code>，且 <code>s</code> 是 <code>f</code> 的一个子集.</p> <div class="language-cpp line-numbers-mode"><pre class="language-cpp"><code><span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">unsigned</span> t <span class="token operator">=</span> <span class="token punctuation">(</span>f <span class="token operator">^</span> s<span class="token punctuation">)</span> <span class="token operator">&amp;</span> u <span class="token punctuation">;</span> t <span class="token punctuation">;</span> t <span class="token operator">&amp;</span><span class="token operator">=</span> <span class="token punctuation">(</span>t <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token keyword">unsigned</span> bit <span class="token operator">=</span> t <span class="token operator">&amp;</span> <span class="token operator">-</span>t<span class="token punctuation">;</span>
+    <span class="token comment">/* do something on bit */</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div></div> <div class="page-edit"><div class="edit-link"><a href="https://github.com/ac-voyage/ac-voyage/edit/master/library/dynamic-programming/bitmasking.md" target="_blank" rel="noopener noreferrer">Edit this page</a> <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></div> <div class="last-updated"><span class="prefix">Last Updated: </span> <span class="time">8/15/2018, 4:37:18 PM</span></div></div> <div class="page-nav"><p class="inner"><span class="prev">
         ←
         <a href="/library/data-structure/persistent-segment-tree.html" class="prev">
           可持久化线段树
@@ -34,6 +39,6 @@
         </a>
         →
       </span></p></div> </div> <!----></div></div>
-    <script src="/assets/js/7.2f419b6a.js" defer></script><script src="/assets/js/app.f1e5f2d0.js" defer></script>
+    <script src="/assets/js/7.4151bca0.js" defer></script><script src="/assets/js/app.253892f1.js" defer></script>
   </body>
 </html>
